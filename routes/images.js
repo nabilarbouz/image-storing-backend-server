@@ -11,7 +11,7 @@ const multer = require("multer");
 const upload = multer({dest: "uploads/"});
 
 var corsOptions = {
-    origin: 'http://project-3-frontend-lb-249883157.us-east-1.elb.amazonaws.com/'
+    origin: 'http://project-3-frontend-lb-249883157.us-east-1.elb.amazonaws.com'
 }
 
 router.post('/', cors(corsOptions), upload.single('image'), async (req, res ) => {
