@@ -16,7 +16,7 @@ router.post('/', upload.single('image'), async (req, res ) => {
     const result = await uploadFile(file);
     await unlinkFile(file.path)
     console.log(result);
-    res.send({imagePath: `/images/${result.Key}`});
+    res.send({imagePath: `http://project-3-backend-LB-1343831669.us-east-1.elb.amazonaws.com/images/${result.Key}`});
 });
 
 router.get('/:key', (req, res) => {
