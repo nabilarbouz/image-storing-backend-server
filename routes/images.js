@@ -20,7 +20,7 @@ router.post('/', cors(corsOptions), upload.single('image'), async (req, res ) =>
     const result = await uploadFile(file);
     await unlinkFile(file.path)
     console.log(result);
-    res.send({imagePath: `http://internal-i-backend-LB-1240427538.us-east-1.elb.amazonaws.com/images/${result.Key}`});
+    res.send({imagePath: `http://project-3-backend-LB-1379792183.us-east-1.elb.amazonaws.com/images/${result.Key}`});
 });
 
 router.get('/:key', (req, res) => {
